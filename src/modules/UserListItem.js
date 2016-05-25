@@ -1,18 +1,23 @@
-var React = require('react');
-var UserListItem = require('./UserListItem');
+import React, { PropTypes, Component } from 'react';
 
-module.exports = React.createClass({
-  displayName: 'UserListItem',
+export default class UserListItem extends Component {
+  static propTypes = {
+    user: PropTypes.object.isRequired
+  };
 
-  render: function() {
-    var user = this.props.user;
+  render() {
+    const {
+      email,
+      name,
+      picture
+    } = this.props.user;
 
     return (
       <li>
-        <img src={user.picture} />
-        <h3>{'Name: '}{user.name}</h3>
-        <h4>{user.email}</h4>
+        <img src={picture} />
+        <h3>{'Name: '}{name}</h3>
+        <h4>{email}</h4>
       </li>
     );
   }
-});
+}

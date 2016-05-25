@@ -1,5 +1,5 @@
 var React = require('react');
-var UserListItem = require('./UserListItem');
+var UserListItem = require('./UserListItem').default;
 
 module.exports = React.createClass({
   displayName: 'UserList',
