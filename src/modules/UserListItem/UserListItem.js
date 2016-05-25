@@ -1,5 +1,7 @@
 import React, { PropTypes, Component } from 'react';
 
+import styles from './styles.css';
+
 export default class UserListItem extends Component {
   static propTypes = {
     user: PropTypes.object.isRequired
@@ -13,10 +15,10 @@ export default class UserListItem extends Component {
     } = this.props.user;
 
     return (
-      <li>
+      <li className={styles.root}>
         <img src={picture} />
-        <h3>{'Name: '}{name}</h3>
-        <h4>{email}</h4>
+        <h3 className={styles.name}>{'Name: '}{name}</h3>
+        <h4 className={styles.email}>{email}</h4>
       </li>
     );
   }

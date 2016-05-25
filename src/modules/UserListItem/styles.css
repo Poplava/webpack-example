@@ -1,0 +1,15 @@
+.root {
+    border: 1px solid #999;
+    margin: 0 0 20px;
+    padding: 20px;
+    background: url(./images/bg.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.name {
+    color: #944;
+}
+
+.email {
+    color: #aaa;
+}

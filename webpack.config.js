@@ -23,6 +23,14 @@ module.exports = {
         test: /\.js?$/,
         exclude: /node_modules/,
         loader: 'babel'
+      },
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader?modules'
+      },
+      {
+        test: /\.(eot|png|jpg|svg|woff|woff2|ttf)(\?.*)?$/,
+        loader: 'file'
       }
     ]
   },
