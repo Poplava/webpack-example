@@ -15,6 +15,10 @@ module.exports = {
     root: [path.join(__dirname, 'src')]
   },
 
+  externals: {
+    appData: '__APP_DATA__'
+  },
+
   plugins: [],
 
   module: {
